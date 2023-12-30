@@ -16,7 +16,7 @@ hook_dir = partial(
 )
 
 
-def install0(*args, **kwargs):
+def install0(c, *args, **kwargs):
     apt_depends(c, "git")
     go.install0()
     if not cmd_avail(c, "glide"):
